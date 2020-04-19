@@ -11,7 +11,7 @@ import debounce from 'lodash.debounce';
 import * as Notes from './controllers/note_controller';
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/notes';
-mongoose.connect(mongoURI);
+mongoose.connect(mongoURI, { useNewUrlParser: true });
 // set mongoose promises to es6 default
 mongoose.Promise = global.Promise;
 
